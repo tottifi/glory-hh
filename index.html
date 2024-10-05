@@ -2,23 +2,39 @@
 <html>
     <head>
         <title>Glory HH</title>
-        <script src="src/script.js" type="script/js"></script>
-        <style src="src/style.css"></style>
+        <script src="src/script.js"></script>
+        <link rel="stylesheet" href="src/style.css" />
     </head>
     <body>
-        <div>
-            <div>
-                <div>
-                    <img>
+        <div id="main-container">
+            <div id="main-top">
+                <div id="pad-result-container">
                 </div>
             </div>
-            <div>
-                <div>
-                    <div></div>
+            <div id="main-bottom">
+                <div id="main-left">
+                    <div id="pad-container">
+                        <div id="pad-top" onclick="onClickPad('top')">
+                            <img class="pad-arrow" src="assets/img/arrow_white.png" />
+                        </div>
+                        <div id="pad-right" onclick="onClickPad('right')">
+                            <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(90deg);"/>
+                        </div>
+                        <div id="pad-bottom" onclick="onClickPad('bottom')">
+                            <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(180deg);"/>
+                        </div>
+                        <div id="pad-left" onclick="onClickPad('left')">
+                            <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(270deg);"/>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div onclick="launchSoundDrop()">
-                        <img src="assets/img/Hard_Difficulty_Icon.png" />
+                <div id="main-right">
+                    <div id="event-container">
+                    </div>
+                    <div id="addon-container">
+                        <div onclick="launchSoundDrop()">
+                            <img src="assets/img/Hard_Difficulty_Icon.png" />
+                        </div>
                     </div>
                 </div>
             </div>

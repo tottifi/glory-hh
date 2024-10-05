@@ -1,5 +1,97 @@
 body, html {
     width: 100%;
     height: 100%;
+    margin: 0px;
+    padding: 0px;
     background-color: cornflowerblue;
+}
+
+#main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main-top {
+    width: 100%;
+    height: 25%;
+}
+#main-bottom {
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-left {
+    width: 40%;
+    height: 100%;
+}
+#main-right {
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pad-container {
+    position: relative;
+    width: 74vh;
+    max-width: 100%;
+    height: 74vh;
+}
+
+.pad-arrow {
+    width: 100%;
+    height: 100%;
+}
+#pad-top, #pad-left, #pad-right, #pad-bottom {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+}
+
+#pad-top {
+    top: 0%;
+    left: 30%;
+}
+#pad-right {
+    top: 30%;
+    right: 0%;
+}
+#pad-bottom {
+    bottom: 0%;
+    left: 30%;
+}
+#pad-left {
+    top: 30%;
+    left: 0%;
+}
+
+#pad-result-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#pad-result-container > * {
+    width: 20vh;
+    height: 20vh;
+}
+
+#event-container {
+    width: 70%;
+    height: 100%;
+}
+
+#addon-container {
+    width: 30%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

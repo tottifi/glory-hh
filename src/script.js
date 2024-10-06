@@ -1,12 +1,16 @@
 var timerPad = null;
 var padValues = '';
 var padMatch = false;
-var sound = new Audio();
-var audio = new Audio();
+var sounds = {
+    drop: new Audio('assets/snd/drop.mp3'),
+    key: new Audio('assets/snd/key.mp3')
+};
 
 function onClickPad(arrow) {
     let rotation = '0';
-    switch(arrow) {
+    sounds.key.fastSeek(0);
+    sounds.key.play();
+    switch (arrow) {
         case 'top': break;
         case 'right':
             rotation = '90';
@@ -48,7 +52,7 @@ function clearPadResult() {
 }
 
 function checkPadValues(values) {
-    if (values.includes('top,right,bottom,bottom,bottom')) {
+    if (values == 'top,right,bottom,bottom,bottom,') {
 
     } else {
         return false;
@@ -56,9 +60,17 @@ function checkPadValues(values) {
     return true;
 }
 
-function launchSoundDrop() {
-    audio.pause();
-    audio.src = 'assets/snd/drop.mp3';
-    audio.load();
-    audio.play();
+function pauseAll() {
+    Object.keys(sounds).forEach(key => sounds[key].pause());
 }
+
+function loadAll() {
+    Object.keys(sounds).forEach(key => sounds[key].load());
+}
+
+function launchSoundDrop() {
+    pauseAll();
+    sounds.drop.play()
+}
+
+//loadAll();

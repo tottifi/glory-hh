@@ -123,3 +123,14 @@ html {
     flex-direction: column;
     align-items: center;
 }
+
+#addon-container>* {
+    margin-bottom: 5%;
+}
+
+#pause-button {
+    width: 20%;
+    height: 10%;
+    border-radius: 5px;
+    background-color: brown;
+}

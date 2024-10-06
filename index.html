@@ -1,43 +1,56 @@
 <!DOCTYPE>
 <html>
-    <head>
-        <title>Glory HH</title>
-        <script src="src/script.js"></script>
-        <link rel="stylesheet" href="src/style.css" />
-    </head>
-    <body>
-        <div id="main-container">
-            <div id="main-top">
-                <div id="pad-result-container">
+
+<head>
+    <title>Glory HH</title>
+    <script src="src/script.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="main-top">
+            <div id="pad-result-container">
+            </div>
+        </div>
+        <div id="main-bottom">
+            <div id="main-left">
+                <div id="pad-container">
+                    <div id="pad-top" onclick="onClickPad('top')">
+                        <img class="pad-arrow" src="assets/img/arrow_white.png" />
+                    </div>
+                    <div id="pad-right" onclick="onClickPad('right')">
+                        <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(90deg);" />
+                    </div>
+                    <div id="pad-bottom" onclick="onClickPad('bottom')">
+                        <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(180deg);" />
+                    </div>
+                    <div id="pad-left" onclick="onClickPad('left')">
+                        <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(270deg);" />
+                    </div>
                 </div>
             </div>
-            <div id="main-bottom">
-                <div id="main-left">
-                    <div id="pad-container">
-                        <div id="pad-top" onclick="onClickPad('top')">
-                            <img class="pad-arrow" src="assets/img/arrow_white.png" />
-                        </div>
-                        <div id="pad-right" onclick="onClickPad('right')">
-                            <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(90deg);"/>
-                        </div>
-                        <div id="pad-bottom" onclick="onClickPad('bottom')">
-                            <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(180deg);"/>
-                        </div>
-                        <div id="pad-left" onclick="onClickPad('left')">
-                            <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(270deg);"/>
-                        </div>
-                    </div>
+            <div id="main-right">
+                <div id="event-container">
                 </div>
-                <div id="main-right">
-                    <div id="event-container">
+                <div id="addon-container">
+                    <div onclick="launchSound('missionComplete')">
+                        <img src="assets/img/Easy_Difficulty_Icon.png" />
                     </div>
-                    <div id="addon-container">
-                        <div onclick="launchSoundDrop()">
-                            <img src="assets/img/Hard_Difficulty_Icon.png" />
-                        </div>
+                    <div onclick="launchSound('secureArea')">
+                        <img src="assets/img/Medium_Difficulty_Icon.png" />
                     </div>
+                    <div onclick="launchSound('extract')">
+                        <img src="assets/img/Hard_Difficulty_Icon.png" />
+                    </div>
+                    <div onclick="launchSound('drop')">
+                        <img src="assets/img/Suicide_Difficulty_Icon.png" />
+                    </div>
+                    <div id="pause-button" onclick="pauseAll()"></div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

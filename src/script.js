@@ -2,6 +2,9 @@ var timerPad = null;
 var padValues = '';
 var padMatch = false;
 var sounds = {
+    missionComplete: new Audio('assets/snd/mission-complete.mp3'),
+    secureArea: new Audio('assets/snd/secure-area.mp3'),
+    extract: new Audio('assets/snd/extract.mp3'),
     drop: new Audio('assets/snd/drop.mp3'),
     key: new Audio('assets/snd/key.mp3')
 };
@@ -64,13 +67,7 @@ function pauseAll() {
     Object.keys(sounds).forEach(key => sounds[key].pause());
 }
 
-function loadAll() {
-    Object.keys(sounds).forEach(key => sounds[key].load());
+function launchSound(paramVal) {
+    sounds[paramVal].fastSeek(0);
+    sounds[paramVal].play();
 }
-
-function launchSoundDrop() {
-    pauseAll();
-    sounds.drop.play()
-}
-
-//loadAll();

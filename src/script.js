@@ -6,6 +6,7 @@ var sounds = {
     secureArea: new Audio('assets/snd/secure-area.mp3'),
     extract: new Audio('assets/snd/extract.mp3'),
     drop: new Audio('assets/snd/drop.mp3'),
+    dropshort: new Audio('assets/snd/dropshort.mp3'),
     key: new Audio('assets/snd/key.mp3')
 };
 
@@ -71,3 +72,10 @@ function launchSound(paramVal) {
     sounds[paramVal].fastSeek(0);
     sounds[paramVal].play();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('pad-top').addEventListener("touchend", () => onClickPad('top'));
+    document.getElementById('pad-right').addEventListener("touchend", () => onClickPad('right'));
+    document.getElementById('pad-bottom').addEventListener("touchend", () => onClickPad('bottom'));
+    document.getElementById('pad-left').addEventListener("touchend", () => onClickPad('left'));
+});

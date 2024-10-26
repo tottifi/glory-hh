@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html>
+<html lang="fr_fr">
 
 <head>
     <title>Glory HH</title>
@@ -16,16 +16,16 @@
         <div id="main-bottom">
             <div id="main-left">
                 <div id="pad-container">
-                    <div id="pad-top" onclick="onClickPad('top')">
+                    <div id="pad-top">
                         <img class="pad-arrow" src="assets/img/arrow_white.png" />
                     </div>
-                    <div id="pad-right" onclick="onClickPad('right')">
+                    <div id="pad-right">
                         <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(90deg);" />
                     </div>
-                    <div id="pad-bottom" onclick="onClickPad('bottom')">
+                    <div id="pad-bottom">
                         <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(180deg);" />
                     </div>
-                    <div id="pad-left" onclick="onClickPad('left')">
+                    <div id="pad-left">
                         <img class="pad-arrow" src="assets/img/arrow_white.png" style="transform: rotate(270deg);" />
                     </div>
                 </div>
@@ -34,19 +34,22 @@
                 <div id="event-container">
                 </div>
                 <div id="addon-container">
+                    <div id="pause-button" onclick="pauseAll()"></div>
                     <div onclick="launchSound('missionComplete')">
-                        <img src="assets/img/Easy_Difficulty_Icon.png" />
+                        MISSION COMPLETE
                     </div>
                     <div onclick="launchSound('secureArea')">
-                        <img src="assets/img/Medium_Difficulty_Icon.png" />
+                        SECURE AREA
                     </div>
                     <div onclick="launchSound('extract')">
-                        <img src="assets/img/Hard_Difficulty_Icon.png" />
+                        EXTRACTION
                     </div>
                     <div onclick="launchSound('drop')">
-                        <img src="assets/img/Suicide_Difficulty_Icon.png" />
+                        DROP LONG
                     </div>
-                    <div id="pause-button" onclick="pauseAll()"></div>
+                    <div onclick="launchSound('dropshort')">
+                        DROP SHORT
+                    </div>
                 </div>
             </div>
         </div>
